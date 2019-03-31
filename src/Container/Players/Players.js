@@ -43,11 +43,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-// const mapDispatchToProps = () => {
-//     return {
-//         increment: (c) => increment(c)
-//     }
-// }
-
 
 export default connect(mapStateToProps, null)(Players);
