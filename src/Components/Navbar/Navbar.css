@@ -35,6 +35,11 @@ background-color: #A50044 !important;
     left: 75%;
 }
 
+.navItem {
+    margin-right: 5px;
+    font-family: monospace;
+}
+
 
 @media screen and (max-width: 480px){
     .navigationBar {

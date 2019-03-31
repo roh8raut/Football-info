@@ -1,0 +1,18 @@
+.aboutme-header{
+    font-size: 50px;
+}
+
+.aboutme--body {
+    width: 70%;
+    padding-left: 30%;
+    font-size: large;
+    text-align: justify;
+    margin: 30px 0 35px 0;
+}
+
+@media screen and (max-width: 480px){
+.aboutme--body {
+    width: 90%;
+    padding-left: 10%;
+}
+}
