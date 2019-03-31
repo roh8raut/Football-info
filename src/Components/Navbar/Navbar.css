@@ -1,0 +1,44 @@
+.navbar-container {
+    background-color: #004D98;
+    padding-left: 50%;
+    position: relative;
+    line-height: 50px;
+}
+
+.title {
+    position: absolute;
+    left: 50px;
+    font-size: larger;
+    top: 3px;
+}
+
+.icon {
+    height: 25px;
+    position: absolute;
+    left: 18px;
+    top: 14px;
+}
+
+.nav-items:hover {
+background-color: #A50044 !important;
+}
+
+.brand {
+    padding-top: 17px !important;
+    font-size: 20px !important;
+}
+
+.navigationBar {
+    position: relative;
+    top: 8px;
+    font-size: large;
+    left: 75%;
+}
+
+
+@media screen and (max-width: 480px){
+    .navigationBar {
+        position: inherit;   
+        font-size: small;
+    }
+}

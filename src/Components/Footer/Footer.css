@@ -1,0 +1,33 @@
+.footer {
+    background-color: #0b0c11;
+    color: white;
+    height: 7em;
+    overflow-y: hidden;
+}
+
+.copyright {
+    margin-left: 70%;
+    font-size: larger;
+}
+
+.icons {
+    position: relative;
+    font-size: 23px;
+    left: -45%;
+    top: 12px;
+}
+
+.logos {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 480px){
+    .copyright {
+        margin-left: 2%;
+    }
+
+    .icons {
+        position: inherit;
+        font-size: 23px;
+    }
+}

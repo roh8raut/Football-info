@@ -1,0 +1,72 @@
+.player-info {
+    background-color: aqua;
+    margin-right: 5px;
+    margin-left: 26px !important;
+    max-width: 300px !important;
+    margin-top: 40px;
+    border-radius: 12px;
+    background-color: #A50044;
+}
+
+.profile-pic {
+    max-width: 100%;
+    max-height: 70%;
+}
+
+.info {
+    text-align: left;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+.info b {
+    margin-right: 5px;
+}
+
+.details {
+    display: inline-block;
+    /* width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 32px;
+    position: absolute; */
+    display: inline-block;
+    position: absolute;
+    height: 22px;
+    width: 69%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.details:hover {
+    overflow: visible;
+    /* background-color: white; */
+    width: auto;
+}
+
+
+
+@media screen and (max-width: 480px){
+.player-info {
+    margin-left: 3% !important;
+    width: 45% !important;
+    margin-top: 20px;
+}
+
+.details:hover {
+    overflow: visible;
+    height: 13px;
+    background-color: white;
+    width: auto;
+}
+
+.info {
+    font-size: 1rem;
+    padding-left: 0px;
+
+}
+}
