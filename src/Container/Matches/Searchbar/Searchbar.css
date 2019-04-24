@@ -1,0 +1,35 @@
+ .form-control, .rbt .rbt-menu {
+    width: 45% !important;
+    margin-left: 27%;
+    font-size: small !important;
+    border-radius: 2.25rem !important;
+}
+
+.rbt-menu > li a {
+    font-weight: lighter;
+}
+
+
+.submitBtn {
+    position: relative;
+    left: 26%;
+    bottom: 29px;
+    width: 100px;
+    height: 29px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder !important;
+    border-radius: 20px !important;
+
+}
+
+@media screen and (max-width: 480px){
+    .form-control, .rbt .rbt-menu {
+        width: 62% !important;
+        margin-left: 8%;
+    }
+
+    .submitBtn {
+        left: 34%;
+        width: 85px;
+    }
+}
