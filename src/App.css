@@ -1,5 +1,7 @@
 .App {
   text-align: center;
   overflow-x: hidden;
+  font-family: 'Questrial', sans-serif !important;
+  background-color: #004D98 ;
 }
 

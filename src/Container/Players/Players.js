@@ -2,41 +2,57 @@ import React, { Component } from 'react';
 import { playerAction } from '../../Actions/Actions';
 import store from '../../Store';
 import { connect } from 'react-redux';
-import loader from '../../Assets/ajax-loader.gif';
 import './Players.css'
 import Profile from '../../Components/Profile/Profile';
 import playersData from '../../Stubs/players.json';
 
 
+
 class Players extends Component {
    
     componentDidMount(){
-        // axios.get("https://pure-bayou-11893.herokuapp.com/players")
-        //     .then(res => store.dispatch(playerAction(res.data)));
        store.dispatch(playerAction(playersData));
     }
     render(){
         const props =  this.props;
 
+        const togglePlayers = () => {
+            const players = document.querySelector("#playersList");
+            if(players.classList.contains("hide")){
+                document.querySelector(".showPlayers").innerHTML = "Hide Players";
+                players.classList.remove("anime");
+                players.classList.remove("hide");
+
+            } else{
+                document.querySelector(".showPlayers").innerHTML = "Show Players"
+                players.classList.add("anime")
+                setTimeout(() => {
+                    players.classList.add("hide");
+                },1000) 
+            }
+        }
+
         if(props.isLoading){
             return (
-                <img src={loader} alt="loader"/>
+                <h1>Loaddinggg....</h1>
             )
         } else {
         return(
+        <>
+        <button class="btn btn-info showPlayers" onClick={() => togglePlayers()}>Show players</button>
         <div className="container-fluid">
-            <div className="row">
+            <div className="row row--bg hide" id="playersList">
             {this.props.data.players.map((player) => <Profile key={player._id} player={player}/> 
             )}
             </div>
         </div>
+        </>
         )
         }
 }
 }
 
 const mapStateToProps = (state) => {
-    console.log('state>>>>>>>>>',state)
     return {
         isLoading: state.playerReducer.isLoading,
         data: state.playerReducer.data,

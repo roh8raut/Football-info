@@ -1,33 +1,61 @@
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
+
 .footer {
-    background-color: #0b0c11;
-    color: white;
-    height: 7em;
-    overflow-y: hidden;
+    background-color: #000;
+    color: rgb(209, 196, 196); 
+    max-height: 432px;
+    margin-top: 50px;   
 }
 
 .copyright {
-    margin-left: 70%;
-    font-size: larger;
+    margin-top: 52px;
+    font-size: initial;
 }
 
 .icons {
     position: relative;
-    font-size: 23px;
-    left: -45%;
-    top: 12px;
+    font-size: 120px;
+    bottom: 350px;
+    right: 33%;
+}
+
+.icons a {
+    margin-right: 45px;
 }
 
 .logos {
     margin-right: 10px;
+    color: white;
+}
+
+.messiFace {
+    position: relative;
+    left: 38%;
+    top: 67px;
 }
 
 @media screen and (max-width: 480px){
+    .footer {
+        max-height: 525px;
+    }
     .copyright {
-        margin-left: 2%;
+        /* margin-left: 2%; */
+        position: relative;
+        top: 70px;
     }
 
     .icons {
-        position: inherit;
-        font-size: 23px;
+        position: relative;
+        font-size: 47px;
+        left: 30%;
+        bottom: 95px;
+    }
+
+    .icons a {
+        margin-right: 17px;
+    }
+
+    .messiFace {
+        position: initial;
     }
 }

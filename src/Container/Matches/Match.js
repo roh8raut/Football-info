@@ -9,6 +9,8 @@ import {
 import { connect } from "react-redux";
 import Searchbar from "./Searchbar/Searchbar";
 import MatchResult from './../../Components/MatchResult/MatchResult'
+import loader from './../../Assets/spin.gif';
+
 
 class Match extends Component {
   constructor() {
@@ -37,9 +39,10 @@ class Match extends Component {
   }
   render() {
 
+    if(this.props.isLoading === false){
     return (
       <>
-        Matches
+        
           <Searchbar
           setMatchInfo={this.props.setMatchInfo}
           teams={this.props.teamsData}
@@ -51,17 +54,19 @@ class Match extends Component {
 
       </>
 
-    );
+    )} else {
+      return <img src={loader} style={{width: "200px", height: "200px"}} alt="loader" />
+    }
   }
 }
 
 
 const mapStateToProps = state => {
-  console.log("mSTP", state)
   return {
     teamsData: state.teamsReducer.data,
     matches: state.matchReducer.matches,
     matchInfo: state.matchResultReducer.matchInfo,
+    isLoading: state.matchReducer.isLoading
   };
 
 

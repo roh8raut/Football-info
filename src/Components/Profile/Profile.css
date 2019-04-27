@@ -6,6 +6,11 @@
     margin-top: 40px;
     border-radius: 12px;
     background-color: #A50044;
+    transition: .2s all ease-in-out;
+}
+
+.player-info:hover {
+    transform: scale(1.10)
 }
 
 .profile-pic {

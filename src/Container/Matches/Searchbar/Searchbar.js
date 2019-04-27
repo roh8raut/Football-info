@@ -12,9 +12,7 @@ class Searchbar extends React.Component {
 
 
 handleSubmit = (textValue) => {
-    
-  console.log("this.props.mTCES", this.props.matches)
-    this.props.setMatchInfo(this.props.matches, textValue)
+        this.props.setMatchInfo(this.props.matches, textValue)
   }
 
 

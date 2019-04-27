@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { playerReducer } from './PlayerReducer';
+import { playerReducer, teamsReducer, matchReducer, matchResultReducer } from './PlayerReducer';
 
-export const rootReducer = combineReducers({playerReducer});
+export const rootReducer = combineReducers({playerReducer, teamsReducer, matchReducer, matchResultReducer});
 

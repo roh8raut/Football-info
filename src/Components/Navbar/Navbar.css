@@ -1,5 +1,6 @@
 .navbar-container {
-    background-color: #004D98;
+    /* background-color: #004D98; */
+    background-color: white;
     padding-left: 50%;
     position: relative;
     line-height: 50px;
@@ -20,24 +21,42 @@
 }
 
 .nav-items:hover {
-background-color: #A50044 !important;
+    background-color: #A50044 !important;
+    color: white !important;
+
 }
 
 .brand {
     padding-top: 17px !important;
-    font-size: 20px !important;
+    font-size: 30px !important;
+    color: cyan;
+    text-shadow: 2px 2px #A50044;
+    font-weight: 600;
 }
 
 .navigationBar {
-    position: relative;
+    position: relative !important;
     top: 8px;
     font-size: large;
-    left: 75%;
+    left: 68%;
 }
 
 .navItem {
-    margin-right: 5px;
-    font-family: monospace;
+    margin-right: 45px;
+    font-size: large;
+}
+
+.navItem a {
+    color: white !important;
+}
+
+
+.brandLogo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 10px;
+    top: 4px;
 }
 
 
@@ -45,5 +64,15 @@ background-color: #A50044 !important;
     .navigationBar {
         position: inherit;   
         font-size: small;
+        left: 8%;
+    }
+
+    .brand {
+        padding-top: 15px !important;
+        font-size: 27px !important;
+    }
+
+    .brandLogo {
+        width: 42px;
     }
 }
