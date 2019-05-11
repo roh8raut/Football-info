@@ -39,7 +39,7 @@ class Players extends Component {
         } else {
         return(
         <>
-        <button class="btn btn-info showPlayers" onClick={() => togglePlayers()}>Show players</button>
+        <button className="btn btn-info showPlayers" onClick={() => togglePlayers()}>Show players</button>
         <div className="container-fluid">
             <div className="row row--bg hide" id="playersList">
             {this.props.data.players.map((player) => <Profile key={player._id} player={player}/> 

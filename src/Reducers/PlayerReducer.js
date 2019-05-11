@@ -39,15 +39,6 @@ export const matchReducer = (state = initialState, action) => {
  return state;
 }
 
-// export const resetMatchInfo = (state = initialState, action) => {
-//   if(action.type === "RESET_MATCHINFO"){
-//   return {
-//       matches: action.payload,
-//       // matchInfo: []
-//     }
-//   }
-//     return state;
-// }
 export const matchResultReducer = (state = initialState, action) => {
 const Arr = []
   if (action.type === "MATCH_INFO") {
@@ -57,10 +48,15 @@ const Arr = []
       }
     })
     return {
-      // matches: state.matches,
       matchInfo: Arr  
   }
   }
+
+  if(action.type === "RESET_MATCHINFO"){
+    return {
+      matchInfo: []
+  }
+}
   return state;
 };
 

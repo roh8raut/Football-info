@@ -21,7 +21,7 @@ class Match extends Component {
   }
   async componentDidMount() {
     await axios
-      .get("http://api.football-data.org/v2/competitions/2001/teams", {
+      .get("https://api.football-data.org/v2/competitions/2001/teams", {
         headers: {
           "x-auth-token": "c7da98cc3d4b4c58aa3922a5c8a22dea"
         }
@@ -29,7 +29,7 @@ class Match extends Component {
       .then(res => this.props.fetchTeams(res.data));
 
     await axios
-      .get("http://api.football-data.org/v2/competitions/2001/matches", {
+      .get("https://api.football-data.org/v2/competitions/2001/matches", {
         headers: {
           "x-auth-token": "c7da98cc3d4b4c58aa3922a5c8a22dea"
         }
@@ -38,11 +38,10 @@ class Match extends Component {
 
   }
   render() {
-
     if(this.props.isLoading === false){
     return (
       <>
-        
+        <h2 style={{color: "white"}}>Enter Team's name to view thier recent matches results</h2>
           <Searchbar
           setMatchInfo={this.props.setMatchInfo}
           teams={this.props.teamsData}

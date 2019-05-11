@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "barcaloverz",
+    "firebase-react-deploy": "barcaloverz",
+    "BarcaLoverz": "barcaloverz"
+  }
+}
