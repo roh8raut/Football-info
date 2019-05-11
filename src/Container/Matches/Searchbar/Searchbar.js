@@ -9,6 +9,11 @@ class Searchbar extends React.Component {
     super()
     this.typeahead = React.createRef();
 }
+componentDidMount(){
+  if(this.typeahead.getInstance().getInput().value === ""){
+    this.props.resetArr()
+  }
+}
 
 
 handleSubmit = (textValue) => {
@@ -18,8 +23,9 @@ handleSubmit = (textValue) => {
 
   render(){
   return (
-    <>
+    <div>
     <Typeahead
+    placeholder="Type Text here..."
     className="inputTextBox"
     onFocus={() => this.props.resetArr(this.props.matches)}
     ref={(typeahead) => this.typeahead = typeahead}
@@ -28,7 +34,7 @@ handleSubmit = (textValue) => {
   />
    
   <button className="btn btn-info submitBtn" onClick={() => this.handleSubmit(this.typeahead.getInstance().getInput().value)}>Submit</button>
-  </>
+  </div>
     )}
   }
 
