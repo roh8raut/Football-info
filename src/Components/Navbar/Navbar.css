@@ -59,6 +59,18 @@
     top: 4px;
 }
 
+@media screen and (max-width: 1100px){
+    .navigationBar {
+        left: 57%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .navigationBar {
+        left: 40%;
+    }
+    
+}
 
 @media screen and (max-width: 480px){
     .navigationBar {
