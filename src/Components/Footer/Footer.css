@@ -5,18 +5,13 @@
     color: rgb(209, 196, 196); 
     max-height: 432px;
     margin-top: 50px;   
+    position: relative;
+    overflow: hidden;
 }
 
 .copyright {
-    margin-top: 52px;
+    margin-top: 30px;
     font-size: initial;
-}
-
-.icons {
-    position: relative;
-    font-size: 120px;
-    bottom: 350px;
-    right: 33%;
 }
 
 .icons a {
@@ -24,9 +19,24 @@
 }
 
 .logos {
-    margin-right: 10px;
-    color: white;
+    position: absolute;
+    bottom: 265px;
+    width: 100px;
+    border-radius: 20px;
 }
+
+.logos--fb {
+    right: 90%;
+}
+
+.logos--insta {
+    right: 78%;
+}
+
+.logos--ln {
+    right: 66%;
+}
+
 
 .messiFace {
     position: relative;
@@ -34,25 +44,50 @@
     top: 67px;
 }
 
+@media screen and (max-width: 1100px){
+    .logos {
+        bottom: 305px;
+        width: 88px;
+    }
+    .logos--fb {
+        right: 88%;
+    }
+    
+    .logos--insta {
+        right: 76%;
+    }
+    
+    .logos--ln {
+        right: 64%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .logos {
+        bottom: 325px;
+        width: 70px;
+    }
+}
 @media screen and (max-width: 480px){
     .footer {
-        max-height: 525px;
+        max-height: 607px;
     }
     .copyright {
-        /* margin-left: 2%; */
-        position: relative;
-        top: 70px;
+        padding-top: 70px;
     }
 
-    .icons {
-        position: relative;
-        font-size: 47px;
-        left: 30%;
-        bottom: 95px;
+    .logos {
+        width: 40px;
+        bottom: 110px;
     }
-
-    .icons a {
-        margin-right: 17px;
+    .logos--fb {
+        right: 105px;
+    }
+    .logos--insta {
+        right: 55px;
+    }
+    .logos--ln {
+        right: 5px;
     }
 
     .messiFace {
