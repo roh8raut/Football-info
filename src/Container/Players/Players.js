@@ -3,9 +3,8 @@ import { playerAction } from '../../Actions/Actions';
 import store from '../../Store';
 import { connect } from 'react-redux';
 import './Players.css'
-import Profile from '../../Components/Profile/Profile';
 import playersData from '../../Stubs/players.json';
-
+import Profile from '../../Components/Profile/Profile';
 
 
 class Players extends Component {
@@ -19,6 +18,13 @@ class Players extends Component {
         const togglePlayers = () => {
             const players = document.querySelector("#playersList");
             if(players.classList.contains("hide")){
+
+                const lazyImages = document.querySelectorAll(".lazy");
+                lazyImages.forEach((item) => {
+                    item.src = item.dataset.src;
+                    item.classList.remove("lazy");
+                });
+
                 document.querySelector(".showPlayers").innerHTML = "Hide Players";
                 players.classList.remove("anime");
                 players.classList.remove("hide");
@@ -39,13 +45,12 @@ class Players extends Component {
         } else {
         return(
         <>
-        <button className="btn btn-info showPlayers" onClick={() => togglePlayers()}>Show players</button>
-        <div className="container-fluid">
-            <div className="row row--bg hide" id="playersList">
-            {this.props.data.players.map((player) => <Profile key={player._id} player={player}/> 
-            )}
+        <button className="btn btn-info showPlayers" onClick={() => togglePlayers()}>Show players</button>        
+            <div className="container-fluid">
+                <div className="row row--bg hide" id="playersList">
+                    {this.props.data.players.map((player) => <Profile key={player._id} player={player}/>)}                
+                </div>
             </div>
-        </div>
         </>
         )
         }

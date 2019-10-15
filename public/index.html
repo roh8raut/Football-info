@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/../../src/Assets/brand.svg" /> -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./brand.ico">
     <meta
       name="viewport"
@@ -25,7 +24,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>BarcaLoverz</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="preload" as="style" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" onload="this.rel='stylesheet'">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
