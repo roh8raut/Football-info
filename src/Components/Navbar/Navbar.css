@@ -1,3 +1,15 @@
+.navbar {
+    position: fixed !important;
+    background-color: #004D98;
+    z-index: 1;
+    width: 100%;
+    min-height: 70px;
+    top: 0px;
+    transition: all 0.5s ease;
+}
+
+
+
 .navbar-container {
     /* background-color: #004D98; */
     background-color: white;

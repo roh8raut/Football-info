@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 export default class NavigationBar extends React.Component {
+
   constructor(props) {
     super(props);
 
@@ -13,6 +14,16 @@ export default class NavigationBar extends React.Component {
     this.state = {
       collapsed: true
     };
+    console.log("previous page offser", window.pageYOffset);
+    let previuosScrollValue = 0;
+    window.onscroll = () => {
+      if (previuosScrollValue < window.pageYOffset) {
+        document.querySelector(".navbar").style.top = "-100px"
+      } else {
+        document.querySelector(".navbar").style.top = "0px";
+      }
+      previuosScrollValue = window.pageYOffset;
+    }
   }
 
   toggleNavbar() {
