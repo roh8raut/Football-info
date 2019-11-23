@@ -5,7 +5,7 @@
     width: 100%;
     min-height: 70px;
     top: 0px;
-    transition: all 0.5s ease;
+    transition: top 0.5s linear;
 }
 
 
@@ -80,6 +80,7 @@
 @media screen and (max-width: 800px){
     .navigationBar {
         left: 40%;
+        height: 95px;
     }
     
 }
@@ -89,6 +90,7 @@
         position: inherit;   
         font-size: small;
         left: 8%;
+        height: 95px;
     }
 
     .brand {

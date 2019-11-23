@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 import Searchbar from "./Searchbar/Searchbar";
 import MatchResult from './../../Components/MatchResult/MatchResult'
 import loader from './../../Assets/spin.gif';
+import './Match.css';
 
 
 class Match extends Component {
@@ -39,8 +40,10 @@ class Match extends Component {
   }
   render() {
     if(this.props.isLoading === false){
+      console.log("this", this.props.matchInfo);
     return (
       <>
+      <div className = "match-searchbox-container">
         <h2 style={{color: "white"}}>Enter Team's name to view thier recent matches results</h2>
           <Searchbar
           setMatchInfo={this.props.setMatchInfo}
@@ -49,12 +52,13 @@ class Match extends Component {
           matches={this.props.matches}
           resetArr={this.props.resetArr}
         />
+      </div>    
         <MatchResult matchInfo={this.props.matchInfo} />
-
+      
       </>
 
     )} else {
-      return <img src={loader} style={{width: "200px", height: "200px"}} alt="loader" />
+      return <img src={loader} style={{width: "200px", height: "200px", marginTop: "120px"}} alt="loader" />
     }
   }
 }
